@@ -32,8 +32,8 @@ public class Recoil : MixinBase
         {
             //extra smoothness in the end of the recoil
             var extraSmoother = Mathf.Clamp((1 - i * 3), 0f, 1f);
-            camLogic.xOffset -= recoilStrength * 0.0015f * randX * extraSmoother;
-            camLogic.yOffset += recoilStrength * 0.0015f * randY * extraSmoother;
+            camLogic.xOffset -= recoilStrength * 0.02f * randX * extraSmoother;
+            camLogic.yOffset += recoilStrength * 0.02f * randY * extraSmoother;
 
             yield return 0;
         }
