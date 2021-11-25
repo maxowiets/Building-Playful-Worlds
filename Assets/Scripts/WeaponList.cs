@@ -61,7 +61,7 @@ public class WeaponList : MonoBehaviour
     {
         if (currentWeaponNumber != newWeaponNumber)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().switchTimer);
             weapons[currentWeaponNumber].SetActive(false);
             currentWeaponNumber = newWeaponNumber;
             currentWeaponNumber = newWeaponNumber;

@@ -64,9 +64,13 @@ public class PlayerControls : MonoBehaviour
         }
         for (int i = 0; i < weaponList.weapons.Count; i++)
         {
-            if (Input.GetKey(weaponKeyCodes[i]))
+            if (weaponList.currentWeaponSwitching.Check())
             {
-                StartCoroutine(weaponList.SwitchWeapon(i));
+                if (Input.GetKey(weaponKeyCodes[i]))
+                {
+                    weaponList.currentWeaponSwitching.Action();
+                    StartCoroutine(weaponList.SwitchWeapon(i));
+                }
             }
         }
 
