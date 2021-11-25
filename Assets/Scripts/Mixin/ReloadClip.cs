@@ -8,8 +8,8 @@ public class ReloadClip : MixinBase
     public float clipSize;
 
     public float reloadTimer;
-    float reloadTime;
-    bool isReloading;
+    public float reloadTime;
+    public bool isReloading;
 
     public override bool Check()
     {

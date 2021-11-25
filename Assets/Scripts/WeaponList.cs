@@ -9,6 +9,7 @@ public class WeaponList : MonoBehaviour
 
     public CallMixins currentWeaponMixins;
     public MixinBase currentWeaponReloadMixin;
+    public MixinBase currentWeaponSwitching;
 
     private void Start()
     {
@@ -30,8 +31,9 @@ public class WeaponList : MonoBehaviour
         }
     }
 
-    public void SwitchToNextWeapon()
+    public IEnumerator SwitchToNextWeapon()
     {
+        yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().switchTimer);
         weapons[currentWeaponNumber].SetActive(false);
         currentWeaponNumber++;
         if (currentWeaponNumber > weapons.Count - 1)
@@ -42,8 +44,9 @@ public class WeaponList : MonoBehaviour
         NewCurrentWeapon();
     }
 
-    public void SwitchToPreviousWeapon()
+    public IEnumerator SwitchToPreviousWeapon()
     {
+        yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().switchTimer);
         weapons[currentWeaponNumber].SetActive(false);
         currentWeaponNumber--;
         if (currentWeaponNumber < 0)
@@ -54,11 +57,13 @@ public class WeaponList : MonoBehaviour
         NewCurrentWeapon();
     }
 
-    public void SwitchWeapon(int newWeaponNumber)
+    public IEnumerator SwitchWeapon(int newWeaponNumber)
     {
         if (currentWeaponNumber != newWeaponNumber)
         {
+            yield return new WaitForSeconds(1f);
             weapons[currentWeaponNumber].SetActive(false);
+            currentWeaponNumber = newWeaponNumber;
             currentWeaponNumber = newWeaponNumber;
             weapons[currentWeaponNumber].SetActive(true);
             NewCurrentWeapon();
@@ -69,5 +74,6 @@ public class WeaponList : MonoBehaviour
     {
         currentWeaponMixins = weapons[currentWeaponNumber].GetComponentInChildren<CallMixins>();
         currentWeaponReloadMixin = currentWeaponMixins.GetComponentInChildren<ReloadClip>();
+        currentWeaponSwitching = currentWeaponMixins.GetComponentInChildren<SwitchWeapons>();
     }
 }

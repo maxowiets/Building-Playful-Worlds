@@ -5,8 +5,11 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour
 {
     public int mouseSensitivity;
+    public Transform player;
     public Transform cam;
-    float xRotation;
+    public float xRotation;
+    public float xOffset;
+    public float yOffset;
 
     private void Start()
     {
@@ -21,8 +24,9 @@ public class PlayerCamera : MonoBehaviour
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        var xTotal = Mathf.Clamp(xRotation + xOffset, -90f, 90f);
 
-        cam.localRotation = Quaternion.Euler(xRotation, 0, 0);
-        transform.Rotate(Vector3.up * mouseX);
+        cam.localRotation = Quaternion.Euler(xTotal, yOffset, 0);
+        player.transform.Rotate(Vector3.up * mouseX);
     }
 }
