@@ -6,3 +6,8 @@ public enum Directions
     WEST,
     UP,
 }
+public enum ShootingModeEnum
+{
+    SEMI = 0,
+    AUTO,
+}

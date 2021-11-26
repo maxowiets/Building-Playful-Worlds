@@ -10,6 +10,7 @@ public class WeaponList : MonoBehaviour
     public CallMixins currentWeaponMixins;
     public MixinBase currentWeaponReloadMixin;
     public MixinBase currentWeaponSwitching;
+    public ShootingMode currentWeaponShootingMode;
 
     private void Start()
     {
@@ -75,5 +76,6 @@ public class WeaponList : MonoBehaviour
         currentWeaponMixins = weapons[currentWeaponNumber].GetComponentInChildren<CallMixins>();
         currentWeaponReloadMixin = currentWeaponMixins.GetComponentInChildren<ReloadClip>();
         currentWeaponSwitching = currentWeaponMixins.GetComponentInChildren<SwitchWeapons>();
+        currentWeaponShootingMode = currentWeaponMixins.GetComponentInChildren<ShootingMode>();
     }
 }

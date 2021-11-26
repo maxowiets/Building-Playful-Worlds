@@ -20,11 +20,25 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(fire1))
+        switch (weaponList.currentWeaponShootingMode.shootingMode)
         {
-            weaponList.currentWeaponMixins.CallMixinAction();
+            case ShootingModeEnum.SEMI:
+                if (Input.GetKeyDown(fire1))
+                {
+                    weaponList.currentWeaponMixins.CallMixinAction();
+                }
+                break;
+            case ShootingModeEnum.AUTO:
+                if (Input.GetKey(fire1))
+                {
+                    weaponList.currentWeaponMixins.CallMixinAction();
+                }
+                break;
+            default:
+                break;
         }
-        if (Input.GetKey(reload))
+
+        if (Input.GetKeyDown(reload))
         {
             weaponList.currentWeaponReloadMixin?.Action();
         }
