@@ -6,7 +6,7 @@ public class PlayerMovementForce : MonoBehaviour
 {
     public float speed;
     public float sprintSpeed;
-    public float jumpStrength;
+    public float jumpHeight;
     public float gravityStrength;
     public float drag;
 
@@ -23,12 +23,6 @@ public class PlayerMovementForce : MonoBehaviour
     Vector3 groundCheck = new Vector3(0, -0.51f, 0);
     float groundDistance = 0.5f;
     public LayerMask groundLayer;
-
-    private void Update()
-    {
-        //drag
-        rb.velocity = new Vector3(rb.velocity.x * (1 - drag * Time.deltaTime), rb.velocity.y, rb.velocity.z * (1 - drag * Time.deltaTime));
-    }
 
     void FixedUpdate()
     {
@@ -50,13 +44,15 @@ public class PlayerMovementForce : MonoBehaviour
 
         jump = Input.GetKey(KeyCode.Space);
         if (jump && IsGrounded() && !jumped) {
-            rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+            rb.velocity = new Vector3(rb.velocity.x, Mathf.Sqrt(jumpHeight * 2f * -gravityStrength), rb.velocity.z);
             jumped = true;
         }
 
-
         //gravity forces
-        if (!IsGrounded()) rb.AddForce(Vector3.up * gravityStrength);
+        if (!IsGrounded()) rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + (gravityStrength * Time.deltaTime), rb.velocity.z);
+
+        //drag
+        rb.velocity = new Vector3(rb.velocity.x * (1 - drag * Time.deltaTime), rb.velocity.y, rb.velocity.z * (1 - drag * Time.deltaTime));
     }
 
     //ground check

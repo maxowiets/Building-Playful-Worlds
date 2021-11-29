@@ -10,42 +10,38 @@ public class BulletTransform : MonoBehaviour
     public GameObject hitParticles;
     public float particleDuration;
     public float bulletLifeTime;
+    public float bulletDamage;
 
-    private void Start()
+    public virtual void Start()
     {
         Destroy(bullet.gameObject ,bulletLifeTime);
     }
 
-    private void Update()
+    public virtual void Update()
     {
         prevPos = bullet.transform.position;
         bullet.transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        RaycastHit hit; 
-        Physics.Raycast(bullet.transform.position, (bullet.transform.position - prevPos).normalized, out hit, (bullet.transform.position - prevPos).magnitude);
+        RaycastHit hit;
+        Physics.SphereCast(bullet.transform.position, bullet.localScale.x * 0.5f, (bullet.transform.position - prevPos).normalized, out hit, (bullet.transform.position - prevPos).magnitude);
 
         if (hit.collider != null)
         {
             var hitParticle = Instantiate(hitParticles, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+
+            //if (hit.collider.gameObject.tag == "Enemy")
+            //{
+            //    Destroy(hit.collider.gameObject);
+            //}
+
+            IDamagable iDam = hit.collider.GetComponent<IDamagable>();
+            if (iDam != null)
+            {
+                iDam.TakeDamage(bulletDamage * PlayerStats.DamageMultiplier);
+            }
+
             Destroy(hitParticle.gameObject, particleDuration);
             Destroy(bullet.gameObject);
-
-            if (hit.collider?.gameObject.tag == "Enemy")
-            {
-                Destroy(hit.collider.gameObject);
-            }
         }
-
-
-        //RaycastHit[] hits = Physics.RaycastAll(bullet.transform.position, (bullet.transform.position - prevPos).normalized, (bullet.transform.position - prevPos).magnitude);
-
-        //for (int i = 0; i < hits.Length; i++)
-        //{
-        //    if (hits[i].collider.gameObject.tag == "Enemy")
-        //    {
-        //        Destroy(hits[i].collider.gameObject);
-        //        Destroy(this.gameObject);
-        //    }
-        //}
     }
 }

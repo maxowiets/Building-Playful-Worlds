@@ -177,6 +177,7 @@ MonoBehaviour:
   hitParticles: {fileID: 2882632248756380060, guid: 0939b067ff542c8498bc92f8be7128dc, type: 3}
   particleDuration: 1
   bulletLifeTime: 3
+  bulletDamage: 10
 --- !u!1 &7457189969699395928
 GameObject:
   m_ObjectHideFlags: 0

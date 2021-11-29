@@ -22,7 +22,7 @@ public class ChargeWeapon : MixinBase
 
     public override void Action()
     {
-        currentChargingBullet.GetComponentInChildren<ChargedBulletTransform>().enabled = true;
+        currentChargingBullet.GetComponentInChildren<BulletTransform>().enabled = true;
         currentChargingBullet.transform.parent = null;
         currentCharge = 0;
         var newChargedBullet = Instantiate(chargedBullet, firePosition.position, Quaternion.LookRotation(firePosition.forward));

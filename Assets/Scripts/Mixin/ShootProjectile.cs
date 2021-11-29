@@ -14,7 +14,7 @@ public class ShootProjectile : MixinBase
         for (int i = 0; i < shotsPerShot; i++)
         {
             Vector3 shootDirection = firePosition.transform.forward;
-            var accuracyCalculation = (100f - accuracy) / 1000f;
+            var accuracyCalculation = ((100f - accuracy) / 1000f) * PlayerStats.AccuracyMultiplier;
             Vector3 accuracyOffset = new Vector3(Random.Range(-accuracyCalculation, accuracyCalculation), Random.Range(-accuracyCalculation, accuracyCalculation));
             shootDirection = shootDirection + firePosition.TransformDirection(accuracyOffset);
             Quaternion bulletRotation = Quaternion.LookRotation(shootDirection);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireCooldown : MixinBase
 {
-    public float cooldownTimer;
+    public float shotsPerSecond;
     float cooldownTime;
     bool isCool;
 
@@ -24,7 +24,7 @@ public class FireCooldown : MixinBase
         if (!isCool)
         {
             cooldownTime += Time.deltaTime;
-            if (cooldownTime >= cooldownTimer)
+            if (cooldownTime >= 1f / (shotsPerSecond * PlayerStats.AttackSpeedMultiplier))
             {
                 isCool = true;
             }

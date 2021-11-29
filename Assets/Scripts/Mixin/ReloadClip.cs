@@ -27,7 +27,7 @@ public class ReloadClip : MixinBase
         if (isReloading)
         {
             reloadTime += Time.deltaTime;
-            if (reloadTime >= reloadTimer)
+            if (reloadTime >= reloadTimer * PlayerStats.ReloadSpeedMultiplier)
             {
                 clipData.SetData(clipSize);
                 isReloading = false;

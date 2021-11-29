@@ -65,7 +65,6 @@ public class WeaponList : MonoBehaviour
             yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().switchTimer);
             weapons[currentWeaponNumber].SetActive(false);
             currentWeaponNumber = newWeaponNumber;
-            currentWeaponNumber = newWeaponNumber;
             weapons[currentWeaponNumber].SetActive(true);
             NewCurrentWeapon();
         }
