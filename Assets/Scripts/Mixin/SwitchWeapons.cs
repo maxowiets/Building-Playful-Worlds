@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwitchWeapons : MixinBase
 {
-    public float switchTimer = 1;
+    public FloatData data;
     float switchTime;
     bool isSwitching = true;
 
@@ -16,7 +16,7 @@ public class SwitchWeapons : MixinBase
     public override void Action()
     {
         isSwitching = true;
-        switchTime = -switchTimer;
+        switchTime = -data.SwitchWeaponDuration;
     }
 
     private void Update()
@@ -24,7 +24,7 @@ public class SwitchWeapons : MixinBase
         if (isSwitching)
         {
             switchTime += Time.deltaTime;
-            if (switchTime > switchTimer)
+            if (switchTime > data.SwitchWeaponDuration)
             {
                 isSwitching = false;
             }

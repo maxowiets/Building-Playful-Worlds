@@ -19,6 +19,9 @@ public class PickUps : MonoBehaviour
     {
         switch (pickUpType)
         {
+            case PickUpType.DAMAGE:
+                PlayerStats.DamageMultiplier += 0.1f;
+                break;
             case PickUpType.ATTACKSPEED:
                 PlayerStats.AttackSpeedMultiplier += 0.1f;
                 break;
@@ -30,6 +33,17 @@ public class PickUps : MonoBehaviour
                 break;
             case PickUpType.RELOADSPEED:
                 PlayerStats.ReloadSpeedMultiplier *= 0.9f;
+                break;
+            case PickUpType.MOVEMENTSPEED:
+                PlayerStats.SpeedMultiplier += 0.1f;
+                break;
+            case PickUpType.SPRINTSPEED:
+                PlayerStats.SprintSpeedMultiplier += 0.1f;
+                break;
+            case PickUpType.JUMPHEIGHT:
+                PlayerStats.JumpHeightMultiplier += 0.1f;
+                break;
+            default:
                 break;
         }
     }

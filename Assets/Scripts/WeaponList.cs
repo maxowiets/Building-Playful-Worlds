@@ -34,7 +34,7 @@ public class WeaponList : MonoBehaviour
 
     public IEnumerator SwitchToNextWeapon()
     {
-        yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().switchTimer);
+        yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().data.SwitchWeaponDuration);
         weapons[currentWeaponNumber].SetActive(false);
         currentWeaponNumber++;
         if (currentWeaponNumber > weapons.Count - 1)
@@ -47,7 +47,7 @@ public class WeaponList : MonoBehaviour
 
     public IEnumerator SwitchToPreviousWeapon()
     {
-        yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().switchTimer);
+        yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().data.SwitchWeaponDuration);
         weapons[currentWeaponNumber].SetActive(false);
         currentWeaponNumber--;
         if (currentWeaponNumber < 0)
@@ -62,7 +62,7 @@ public class WeaponList : MonoBehaviour
     {
         if (currentWeaponNumber != newWeaponNumber)
         {
-            yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().switchTimer);
+            yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().data.SwitchWeaponDuration);
             weapons[currentWeaponNumber].SetActive(false);
             currentWeaponNumber = newWeaponNumber;
             weapons[currentWeaponNumber].SetActive(true);

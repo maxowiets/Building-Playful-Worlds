@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class CheckClip : MixinActionable
 {
-    public FloatData clipData;
-    public float ammoPerShot;
+    public FloatData data;
 
     public override bool Check()
     {
-        if (clipData.GetData() <= 0)
+        if (data.CurrentClipSize <= 0)
         {
             if (actionMixin.Check())
             {
@@ -22,10 +21,10 @@ public class CheckClip : MixinActionable
 
     public override void Action()
     {
-        clipData.AddIncrement(-ammoPerShot);
-        if (clipData.GetData() < 0)
+        data.CurrentClipSize -= data.AmmoCost;
+        if (data.CurrentClipSize < 0)
         {
-            clipData.SetData(0);
+            data.CurrentClipSize = 0;
         }
     }
 }

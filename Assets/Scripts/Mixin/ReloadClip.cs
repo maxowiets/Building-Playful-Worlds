@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ReloadClip : MixinBase
 {
-    public FloatData clipData;
+    public FloatData data;
     public float clipSize;
 
-    public float reloadTimer;
     public float reloadTime;
     public bool isReloading;
 
@@ -27,9 +26,9 @@ public class ReloadClip : MixinBase
         if (isReloading)
         {
             reloadTime += Time.deltaTime;
-            if (reloadTime >= reloadTimer * PlayerStats.ReloadSpeedMultiplier)
+            if (reloadTime >= data.ReloadDuration * PlayerStats.ReloadSpeedMultiplier)
             {
-                clipData.SetData(clipSize);
+                data.CurrentClipSize = data.MaxClipSize;
                 isReloading = false;
             }
         }

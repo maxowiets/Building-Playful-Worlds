@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Scoping : MonoBehaviour
 {
+    public FloatData data;
     public Transform weaponTransform;
     public Transform scopeTransform;
     public bool isScoping;
-    public float scopeSpeed;
 
     private void Update()
     {
         if (isScoping)
         {
-            weaponTransform.localPosition = Vector3.MoveTowards(weaponTransform.localPosition, scopeTransform.localPosition, scopeSpeed * Time.deltaTime);
+            weaponTransform.localPosition = Vector3.MoveTowards(weaponTransform.localPosition, scopeTransform.localPosition, data.ScopeSpeed * Time.deltaTime);
         }
         else
         {
-            weaponTransform.localPosition = Vector3.MoveTowards(weaponTransform.localPosition, Vector3.zero, scopeSpeed * Time.deltaTime);
+            weaponTransform.localPosition = Vector3.MoveTowards(weaponTransform.localPosition, Vector3.zero, data.ScopeSpeed * Time.deltaTime);
         }
         isScoping = false;
     }

@@ -34,10 +34,10 @@ public class BulletTransform : MonoBehaviour
             //    Destroy(hit.collider.gameObject);
             //}
 
-            IDamagable iDam = hit.collider.GetComponent<IDamagable>();
-            if (iDam != null)
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            if (enemy != null)
             {
-                iDam.TakeDamage(bulletDamage * PlayerStats.DamageMultiplier);
+                enemy.TakeDamage(bulletDamage * PlayerStats.DamageMultiplier);
             }
 
             Destroy(hitParticle.gameObject, particleDuration);
