@@ -16,7 +16,7 @@ public class ShootingAnimation : MixinBase
             animationSpeed = clip.length / (1 / (data.ShotsPerSecond * PlayerStats.AttackSpeedMultiplier));
         }
         else animationSpeed = 1;
-        anim.SetFloat("RecoilAnimationSpeed", animationSpeed);
-        anim.SetTrigger("Recoil");
+        anim.SetFloat("ShootAnimationSpeed", animationSpeed);
+        anim.SetTrigger("Shoot");
     }
 }

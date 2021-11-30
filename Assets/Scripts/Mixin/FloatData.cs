@@ -4,25 +4,18 @@ using UnityEngine;
 
 public class FloatData : MonoBehaviour
 {
-    [SerializeField]
-    float currentClipSize;
-    public float CurrentClipSize { get; set; }
-
-    [SerializeField]
-    float maxClipSize;
-    public float MaxClipSize { get; set; }
-
+    [Header("Shooting")]
     [SerializeField]
     float shotsPerSecond;
     public float ShotsPerSecond { get; set; }
 
     [SerializeField]
-    float ammoCost;
-    public float AmmoCost { get; set; }
+    float bulletsPerShot;
+    public float BulletsPerShot { get; set; }
 
     [SerializeField]
-    float reloadDuration;
-    public float ReloadDuration { get; set; }
+    float accuracy;
+    public float Accuracy { get; set; }
 
     [SerializeField]
     float recoilStrength;
@@ -36,6 +29,24 @@ public class FloatData : MonoBehaviour
     float recoilRecoveryStrength;
     public float RecoilRecoveryStrength { get; set; }
 
+    [Header("Clip and Ammo")]
+    [SerializeField]
+    float currentClipSize;
+    public float CurrentClipSize { get; set; }
+
+    [SerializeField]
+    float maxClipSize;
+    public float MaxClipSize { get; set; }
+
+    [SerializeField]
+    float ammoCost;
+    public float AmmoCost { get; set; }
+
+    [Header("Etc.")]
+    [SerializeField]
+    float reloadDuration;
+    public float ReloadDuration { get; set; }
+
     [SerializeField]
     float switchWeaponDuration;
     public float SwitchWeaponDuration { get; set; }
@@ -44,27 +55,19 @@ public class FloatData : MonoBehaviour
     float scopeSpeed;
     public float ScopeSpeed { get; set; }
 
-    [SerializeField]
-    float bulletsPerShot;
-    public float BulletsPerShot { get; set; }
-
-    [SerializeField]
-    float accuracy;
-    public float Accuracy { get; set; }
-
     private void Start()
     {
-        CurrentClipSize = currentClipSize;
-        MaxClipSize = maxClipSize;
         ShotsPerSecond = shotsPerSecond;
-        AmmoCost = ammoCost;
-        ReloadDuration = reloadDuration;
+        BulletsPerShot = bulletsPerShot;
+        Accuracy = accuracy;
         RecoilStrength = recoilStrength;
         RecoilDuration = recoilDuration;
         RecoilRecoveryStrength = recoilRecoveryStrength;
+        CurrentClipSize = currentClipSize;
+        MaxClipSize = maxClipSize;
+        AmmoCost = ammoCost;
+        ReloadDuration = reloadDuration;
         SwitchWeaponDuration = switchWeaponDuration;
         ScopeSpeed = scopeSpeed;
-        BulletsPerShot = bulletsPerShot;
-        Accuracy = accuracy;
     }
 }

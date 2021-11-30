@@ -5,7 +5,6 @@ using UnityEngine;
 public class ReloadClip : MixinBase
 {
     public FloatData data;
-    public float clipSize;
 
     public float reloadTime;
     public bool isReloading;

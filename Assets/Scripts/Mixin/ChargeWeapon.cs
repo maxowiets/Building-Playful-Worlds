@@ -12,8 +12,12 @@ public class ChargeWeapon : MixinBase
     public GameObject chargedBullet;
     GameObject currentChargingBullet;
 
+    public RectTransform chargeBar;
+    float chargeBarStartSize;
+
     private void Start()
     {
+        chargeBarStartSize = chargeBar.sizeDelta.x;
         var newChargedBullet = Instantiate(chargedBullet, firePosition.position, Quaternion.LookRotation(firePosition.forward));
         currentChargingBullet = newChargedBullet;
         currentChargingBullet.transform.parent = firePosition;
@@ -36,6 +40,7 @@ public class ChargeWeapon : MixinBase
         {
             currentCharge += chargeSpeed * Time.deltaTime;
             currentChargingBullet.transform.localScale = Vector3.one * currentCharge;
+            chargeBar.sizeDelta = new Vector2((currentCharge / maxCharge) * chargeBarStartSize, chargeBar.sizeDelta.y);
         }
     }
 }
