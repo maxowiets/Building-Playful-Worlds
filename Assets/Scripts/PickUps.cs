@@ -34,6 +34,9 @@ public class PickUps : MonoBehaviour
             case PickUpType.RELOADSPEED:
                 PlayerStats.ReloadSpeedMultiplier *= 0.9f;
                 break;
+            case PickUpType.CHARGESPEED:
+                PlayerStats.ChargeSpeedMultiplier += 0.1f;
+                break;
             case PickUpType.MOVEMENTSPEED:
                 PlayerStats.SpeedMultiplier += 0.1f;
                 break;

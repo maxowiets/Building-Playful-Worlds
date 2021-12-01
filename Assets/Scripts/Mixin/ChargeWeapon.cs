@@ -38,7 +38,7 @@ public class ChargeWeapon : MixinBase
     {
         if (currentCharge < maxCharge)
         {
-            currentCharge += chargeSpeed * Time.deltaTime;
+            currentCharge += chargeSpeed * PlayerStats.ChargeSpeedMultiplier * Time.deltaTime;
             currentChargingBullet.transform.localScale = Vector3.one * currentCharge;
             chargeBar.sizeDelta = new Vector2((currentCharge / maxCharge) * chargeBarStartSize, chargeBar.sizeDelta.y);
         }

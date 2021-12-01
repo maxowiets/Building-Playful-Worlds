@@ -19,7 +19,16 @@ public enum PickUpType
     RECOIL,
     ACCURACY,
     RELOADSPEED,
+    CHARGESPEED,
     MOVEMENTSPEED,
     SPRINTSPEED,
     JUMPHEIGHT,
+}
+
+public enum PlayerState
+{
+    WALKING = 0,
+    RUNNING,
+    JUMPING,
+    CROUCHING,
 }

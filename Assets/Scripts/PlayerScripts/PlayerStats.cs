@@ -20,6 +20,9 @@ public class PlayerStats : MonoBehaviour
     public float reloadSpeedMultiplier;
     public static float ReloadSpeedMultiplier { get; set; }
 
+    public float chargeSpeedMultiplier;
+    public static float ChargeSpeedMultiplier { get; set; }
+
     //------------------------- Player Stats ----------------------------\\
     public float speedMultiplier;                                  
     public static float SpeedMultiplier { get; set; }              
@@ -37,6 +40,7 @@ public class PlayerStats : MonoBehaviour
         RecoilMultiplier = recoilMultiplier;
         AccuracyMultiplier = accuracyMultiplier;
         ReloadSpeedMultiplier = reloadSpeedMultiplier;
+        ChargeSpeedMultiplier = chargeSpeedMultiplier;
         SpeedMultiplier = speedMultiplier;
         SprintSpeedMultiplier = sprintSpeedMultiplier;
         JumpHeightMultiplier = jumpHeightMultiplier;
