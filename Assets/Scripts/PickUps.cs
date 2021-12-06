@@ -5,6 +5,25 @@ using UnityEngine;
 public class PickUps : MonoBehaviour
 {
     public PickUpType pickUpType;
+    public MeshFilter model;
+    public Dictionary<PickUpType, Mesh> modelDic = new Dictionary<PickUpType, Mesh>();
+
+    public PickUpType[] allTypes;
+    public Mesh[] allMesh;
+
+    private void Awake()
+    {
+        for (int i = 0; i < allTypes.Length; i++)
+        {
+            modelDic.Add(allTypes[i], allMesh[i]);
+        }
+    }
+
+    private void Start()
+    {
+        Debug.Log(modelDic[pickUpType]);
+        model.mesh = modelDic[pickUpType];
+    }
 
     private void OnTriggerEnter(Collider other)
     {
