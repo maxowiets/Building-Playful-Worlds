@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CheckClip : MixinActionable
 {
     public FloatData data;
+    public TextMeshProUGUI ammoText;
 
     public override bool Check()
     {
@@ -22,9 +24,17 @@ public class CheckClip : MixinActionable
     public override void Action()
     {
         data.CurrentClipSize -= data.AmmoCost;
+        data.CurrentAmmo -= data.AmmoCost;
         if (data.CurrentClipSize < 0)
         {
-            data.CurrentClipSize = 0;
+            data.CurrentAmmo += Mathf.Abs(data.CurrentClipSize);
+            data.CurrentClipSize += Mathf.Abs(data.CurrentClipSize);
         }
+        UpdateAmmoUI();
+    }
+
+    void UpdateAmmoUI()
+    {
+        ammoText.text = data.CurrentClipSize + " / " + (data.CurrentAmmo - data.CurrentClipSize);
     }
 }

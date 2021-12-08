@@ -39,6 +39,14 @@ public class FloatData : MonoBehaviour
     public float MaxClipSize { get; set; }
 
     [SerializeField]
+    float currentAmmo;
+    public float CurrentAmmo { get; set; }
+
+    [SerializeField]
+    float maxAmmo;
+    public float MaxAmmo { get; set; }
+
+    [SerializeField]
     float ammoCost;
     public float AmmoCost { get; set; }
 
@@ -65,6 +73,8 @@ public class FloatData : MonoBehaviour
         RecoilRecoveryStrength = recoilRecoveryStrength;
         CurrentClipSize = currentClipSize;
         MaxClipSize = maxClipSize;
+        CurrentAmmo = currentAmmo;
+        MaxAmmo = maxAmmo;
         AmmoCost = ammoCost;
         ReloadDuration = reloadDuration;
         SwitchWeaponDuration = switchWeaponDuration;

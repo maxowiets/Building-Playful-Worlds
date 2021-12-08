@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class WeaponList : MonoBehaviour
 {
-    public List<GameObject> weapons;
-    int currentWeaponNumber;
+    public List<GameObject> weapons = new List<GameObject>();
+    public int currentWeaponNumber;
 
     public CallMixins currentWeaponMixins;
     public MixinBase currentWeaponReloadMixin;
     public MixinBase currentWeaponSwitching;
     public ShootingMode currentWeaponShootingMode;
+
+    private void Awake()
+    {
+        for (int i = 0; i < gameObject.transform.childCount; i++)
+        {
+            weapons.Add(gameObject.transform.GetChild(i).gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -23,6 +31,7 @@ public class WeaponList : MonoBehaviour
                     weapons[i].SetActive(true);
                     currentWeaponNumber = i;
                     NewCurrentWeapon();
+                    currentWeaponReloadMixin.GetComponent<ReloadClip>().Invoke("UpdateAmmoUI", Time.deltaTime);
                 }
                 else
                 {
@@ -32,41 +41,33 @@ public class WeaponList : MonoBehaviour
         }
     }
 
-    public IEnumerator SwitchToNextWeapon()
+    public IEnumerator NewSwitchWeapon(int switchTo)
     {
-        yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().data.SwitchWeaponDuration);
-        weapons[currentWeaponNumber].SetActive(false);
-        currentWeaponNumber++;
-        if (currentWeaponNumber > weapons.Count - 1)
+        if (currentWeaponNumber != switchTo)
         {
-            currentWeaponNumber = 0;
-        }
-        weapons[currentWeaponNumber].SetActive(true);
-        NewCurrentWeapon();
-    }
+            //stop reloading if weapon is reloading
+            if (currentWeaponReloadMixin != null)
+            {
+                if (currentWeaponReloadMixin.GetComponent<ReloadClip>().isReloading)
+                {
+                    currentWeaponReloadMixin.GetComponent<ReloadClip>().isReloading = false;
+                    currentWeaponReloadMixin.GetComponent<ReloadClip>().reloadTime = 0;
+                }
+            }
+            currentWeaponSwitching.Action();
 
-    public IEnumerator SwitchToPreviousWeapon()
-    {
-        yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().data.SwitchWeaponDuration);
-        weapons[currentWeaponNumber].SetActive(false);
-        currentWeaponNumber--;
-        if (currentWeaponNumber < 0)
-        {
-            currentWeaponNumber = weapons.Count - 1;
-        }
-        weapons[currentWeaponNumber].SetActive(true);
-        NewCurrentWeapon();
-    }
-
-    public IEnumerator SwitchWeapon(int newWeaponNumber)
-    {
-        if (currentWeaponNumber != newWeaponNumber)
-        {
+            //start switching sequence
             yield return new WaitForSeconds(currentWeaponSwitching.GetComponent<SwitchWeapons>().data.SwitchWeaponDuration);
             weapons[currentWeaponNumber].SetActive(false);
-            currentWeaponNumber = newWeaponNumber;
+            currentWeaponNumber = switchTo;
+
+            if (currentWeaponNumber > weapons.Count - 1) currentWeaponNumber = 0;
+            if (currentWeaponNumber < 0) currentWeaponNumber = weapons.Count - 1;
+
             weapons[currentWeaponNumber].SetActive(true);
             NewCurrentWeapon();
+            yield return 0;
+            currentWeaponReloadMixin.GetComponent<ReloadClip>().UpdateAmmoUI();
         }
     }
 

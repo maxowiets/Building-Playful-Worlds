@@ -1,0 +1,464 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19043.1348; Version 2009; 64bit' Language: 'nl' Physical Memory: 16327 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+E:\Unity Spul\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/Github/Projects/Building Playful Worlds
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50542
+Successfully changed project path to: E:/Github/Projects/Building Playful Worlds
+E:/Github/Projects/Building Playful Worlds
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 36.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path E:/Unity Spul/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Github/Projects/Building Playful Worlds/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon RX 6700 XT (ID=0x73df)
+    Vendor:   
+    VRAM:     12243 MB
+    Driver:   27.20.22001.16006
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'E:/Unity Spul/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Unity Spul/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Unity Spul/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56824
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Unity Spul/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000680 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 38.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.576 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002208 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 38.21 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.728 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3167 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 218.0 MB.
+System memory in use after: 218.2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3612.
+Total: 1.896500 ms (FindLiveObjects: 0.237500 ms CreateObjectMapping: 0.066000 ms MarkObjects: 1.517100 ms  DeleteObjects: 0.075300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Materials/Ground.mat
+  artifactKey: Guid(3ae3a05e9b9771943b71d1c7b60c0802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Ground.mat using Guid(3ae3a05e9b9771943b71d1c7b60c0802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd6dd2d79cf4c6dd6ffa6cb311c10daa') in 0.156896 seconds 
+  Import took 0.160382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000601 seconds.
+  path: Assets/Materials/Ground.mat
+  artifactKey: Guid(3ae3a05e9b9771943b71d1c7b60c0802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Ground.mat using Guid(3ae3a05e9b9771943b71d1c7b60c0802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd6dd2d79cf4c6dd6ffa6cb311c10daa') in 0.009884 seconds 
+  Import took 0.012932 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.419147 seconds.
+  path: Assets/Weapons Pack(LOW POLY)/ColtM4/Materials/Rocket_Shell_TXTR.mat
+  artifactKey: Guid(4e14d9308e8d24045bbb309ce27623ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons Pack(LOW POLY)/ColtM4/Materials/Rocket_Shell_TXTR.mat using Guid(4e14d9308e8d24045bbb309ce27623ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6de841ab4b2266ac1946e64ad33e88a9') in 0.012082 seconds 
+  Import took 0.015965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Materials/Particle Materials/Smoke.mat
+  artifactKey: Guid(b8885c7e9323c7448a8e801d0339233f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Particle Materials/Smoke.mat using Guid(b8885c7e9323c7448a8e801d0339233f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5a69c16dd0719807693e190a5f7fdb1') in 0.014963 seconds 
+  Import took 0.018087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Weapons Pack(LOW POLY)/ColtM4/Materials/Rocket_Shell_TXTR.mat
+  artifactKey: Guid(4e14d9308e8d24045bbb309ce27623ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons Pack(LOW POLY)/ColtM4/Materials/Rocket_Shell_TXTR.mat using Guid(4e14d9308e8d24045bbb309ce27623ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6de841ab4b2266ac1946e64ad33e88a9') in 0.008489 seconds 
+  Import took 0.011442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Material/Sprites Material.mat
+  artifactKey: Guid(69ed690a112ab9f4e8a4cdcdff2c570e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Material/Sprites Material.mat using Guid(69ed690a112ab9f4e8a4cdcdff2c570e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1925a210318b7956613c0f3d12c43f03') in 0.007897 seconds 
+  Import took 0.010879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Sci-Fi Rifle/Materials/Sci-Fi Rifle.mat
+  artifactKey: Guid(8b91047244ae6504f95c7c160c2ae5e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Rifle/Materials/Sci-Fi Rifle.mat using Guid(8b91047244ae6504f95c7c160c2ae5e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7be40afaa1850092f2517f4d98bfe828') in 0.251982 seconds 
+  Import took 0.255320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001181 seconds.
+  path: Assets/Sci-Fi Rifle/Materials/Sci-Fi Rifle.mat
+  artifactKey: Guid(8b91047244ae6504f95c7c160c2ae5e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Rifle/Materials/Sci-Fi Rifle.mat using Guid(8b91047244ae6504f95c7c160c2ae5e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7be40afaa1850092f2517f4d98bfe828') in 0.017590 seconds 
+  Import took 0.021291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.462736 seconds.
+  path: Assets/Materials/Particle Materials/Explosion Spark.mat
+  artifactKey: Guid(95f2fd8db86e4554ea89ecb2c9c99345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Particle Materials/Explosion Spark.mat using Guid(95f2fd8db86e4554ea89ecb2c9c99345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c863eeefa15835f99a472b0c7fa9764e') in 0.009655 seconds 
+  Import took 0.013417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.895889 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_1.png
+  artifactKey: Guid(e91c78da749a5d44db424d8dbc3d09d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_1.png using Guid(e91c78da749a5d44db424d8dbc3d09d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bcb13ee9725865f3c75b006b8a489c3') in 0.050957 seconds 
+  Import took 0.054818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_5.png
+  artifactKey: Guid(1a13e3417d90c514992155f8e2352e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_5.png using Guid(1a13e3417d90c514992155f8e2352e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfd8adc06af38717f102c93263f6bbb6') in 0.026854 seconds 
+  Import took 0.029921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_4.png
+  artifactKey: Guid(f1163af3b1501ea4fb235e43fe0d8ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_4.png using Guid(f1163af3b1501ea4fb235e43fe0d8ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a505dbc3b5a22294af7261d277e7fb0e') in 0.019039 seconds 
+  Import took 0.022000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000115 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_2.png
+  artifactKey: Guid(6eabaa0866567ca40810e4c83a07ac3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_2.png using Guid(6eabaa0866567ca40810e4c83a07ac3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87b173ba9ea2b0506b00a444c5a0725a') in 0.027491 seconds 
+  Import took 0.030640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_3.png
+  artifactKey: Guid(885a872883f689b4b92caa4416e8fbd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_3.png using Guid(885a872883f689b4b92caa4416e8fbd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f6d5c403ac1e06e37506f67714590d9') in 0.024796 seconds 
+  Import took 0.027820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000110 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_2.png
+  artifactKey: Guid(6eabaa0866567ca40810e4c83a07ac3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_2.png using Guid(6eabaa0866567ca40810e4c83a07ac3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87b173ba9ea2b0506b00a444c5a0725a') in 0.024582 seconds 
+  Import took 0.027634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_1.png
+  artifactKey: Guid(e91c78da749a5d44db424d8dbc3d09d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_1.png using Guid(e91c78da749a5d44db424d8dbc3d09d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bcb13ee9725865f3c75b006b8a489c3') in 0.021706 seconds 
+  Import took 0.024717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_6.png
+  artifactKey: Guid(fd573a71ddad4d14d81ff16547ad5b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_6.png using Guid(fd573a71ddad4d14d81ff16547ad5b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8279d0646d461e32ba127b14cffbecd') in 0.015248 seconds 
+  Import took 0.018335 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001968 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_6.png
+  artifactKey: Guid(fd573a71ddad4d14d81ff16547ad5b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/toon_muzzleflash_side_spritesheet_6.png using Guid(fd573a71ddad4d14d81ff16547ad5b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8279d0646d461e32ba127b14cffbecd') in 0.012689 seconds 
+  Import took 0.015800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.822187 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/hitParticle.png
+  artifactKey: Guid(43baeb144d9da5c4b8285496ba1c0eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/hitParticle.png using Guid(43baeb144d9da5c4b8285496ba1c0eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37d414adef097dc2a572a10a1c803118') in 0.005835 seconds 
+  Import took 0.009251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.037448 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/hitParticle.png
+  artifactKey: Guid(43baeb144d9da5c4b8285496ba1c0eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Side/hitParticle.png using Guid(43baeb144d9da5c4b8285496ba1c0eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c5049bb8c2f449cd2c7ca669cbc71d8') in 0.009697 seconds 
+  Import took 0.013177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.970168 seconds.
+  path: Assets/Prefabs/PickUp.prefab
+  artifactKey: Guid(c7df012a8a16fc5469b8b8efb3794947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PickUp.prefab using Guid(c7df012a8a16fc5469b8b8efb3794947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5240ebdb00afbe7da69b28dacd0aa7c') in 0.018253 seconds 
+  Import took 0.021905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.089941 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_5.png
+  artifactKey: Guid(b0abee70a854b954989a9863f1bcd77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_5.png using Guid(b0abee70a854b954989a9863f1bcd77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09d60987472965e9d92bd5d58c390461') in 0.021252 seconds 
+  Import took 0.024831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000115 seconds.
+  path: Assets/Textures/White Smoke.png
+  artifactKey: Guid(099d91de7b151004eab979af6d1dff79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/White Smoke.png using Guid(099d91de7b151004eab979af6d1dff79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff4479f9c0aaeed1d01246f233d87b4c') in 0.006299 seconds 
+  Import took 0.009313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_5.png
+  artifactKey: Guid(b0abee70a854b954989a9863f1bcd77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_5.png using Guid(b0abee70a854b954989a9863f1bcd77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09d60987472965e9d92bd5d58c390461') in 0.024170 seconds 
+  Import took 0.027293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000115 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_6.png
+  artifactKey: Guid(2984544c952d46f44b178986e1af228e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_6.png using Guid(2984544c952d46f44b178986e1af228e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f743f2eb6508a33eeefcca1cae3d006') in 0.017479 seconds 
+  Import took 0.020792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.885958 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_3.png
+  artifactKey: Guid(544c96a9f753eb348915697c8636f7aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_3.png using Guid(544c96a9f753eb348915697c8636f7aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0bc79e1e109467cc632024be75bea13') in 0.028982 seconds 
+  Import took 0.032411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_4.png
+  artifactKey: Guid(20044d9c0b524da4fb25429c4cf35256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_4.png using Guid(20044d9c0b524da4fb25429c4cf35256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6db47f3691d8e3a41c7522c6a224e6b2') in 0.024931 seconds 
+  Import took 0.028141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_1.png
+  artifactKey: Guid(6d04126786e078144aa61bf1fdd5d6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_1.png using Guid(6d04126786e078144aa61bf1fdd5d6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2935ee3b555364014a736868ec1bc0dc') in 0.024048 seconds 
+  Import took 0.027176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_2.png
+  artifactKey: Guid(ec991a388184d214d8c9bef68873b65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_2.png using Guid(ec991a388184d214d8c9bef68873b65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43599fd915da4716c7964b3bdbe48aa5') in 0.019572 seconds 
+  Import took 0.022673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_1.png
+  artifactKey: Guid(6d04126786e078144aa61bf1fdd5d6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_1.png using Guid(6d04126786e078144aa61bf1fdd5d6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2935ee3b555364014a736868ec1bc0dc') in 0.020220 seconds 
+  Import took 0.023328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_2.png
+  artifactKey: Guid(ec991a388184d214d8c9bef68873b65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components/Spritesheets/Front/toon_muzzleflash_front_spritesheet_2.png using Guid(ec991a388184d214d8c9bef68873b65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43599fd915da4716c7964b3bdbe48aa5') in 0.019247 seconds 
+  Import took 0.022281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.295259 seconds.
+  path: Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Normal.png
+  artifactKey: Guid(46f0acae2be8c2e4c9bfed71ccb7f5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Normal.png using Guid(46f0acae2be8c2e4c9bfed71ccb7f5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5e5bb02a483693531416ef42c073fda') in 0.055080 seconds 
+  Import took 0.058596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Roughness.png
+  artifactKey: Guid(2262f4805c622d14586e1b685d8ca82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Roughness.png using Guid(2262f4805c622d14586e1b685d8ca82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63af192c40082b16ec0f55ec6c4fb478') in 0.014540 seconds 
+  Import took 0.017516 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Metallic.png
+  artifactKey: Guid(181b8dbf1d1cd484281723acf3d044ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Metallic.png using Guid(181b8dbf1d1cd484281723acf3d044ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e70ae75ac6d0a77b2929bec4dc7c76f') in 0.006315 seconds 
+  Import took 0.009349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Height.png
+  artifactKey: Guid(7d8a30db7f3f2384f9197a00d6fc4663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Height.png using Guid(7d8a30db7f3f2384f9197a00d6fc4663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ca8eb2cd6d8032d25d2f95de597829b') in 0.014422 seconds 
+  Import took 0.017510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.103276 seconds.
+  path: Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_BaseColor.png
+  artifactKey: Guid(a096c049e13370945979fc3471c40be1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_BaseColor.png using Guid(a096c049e13370945979fc3471c40be1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03df00c99428a984cd50dbe27461c725') in 0.008745 seconds 
+  Import took 0.012027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000110 seconds.
+  path: Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Emissive.png
+  artifactKey: Guid(f513d87d7c4c8b2488d758509d093bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Rifle/Textures/Sci-Fi Rifle_Emissive.png using Guid(f513d87d7c4c8b2488d758509d093bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb50c6b2ff69e75b4cea6c8e6485d8b') in 0.005228 seconds 
+  Import took 0.007894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.038675 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149876480b70baf6b63ce80023f6a95f') in 0.036451 seconds 
+  Import took 0.039950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Weapons Pack(LOW POLY)/ColtM4/ColtM4.fbm/Rocket_Shell_TXTR.tif
+  artifactKey: Guid(518871c53646e3140973b4f356491ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Weapons Pack(LOW POLY)/ColtM4/ColtM4.fbm/Rocket_Shell_TXTR.tif using Guid(518871c53646e3140973b4f356491ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a21f6e3372213f71f94e0ca8000967d') in 0.015220 seconds 
+  Import took 0.018245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.393694 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34293e17d177a4ef39ee1e96208eea7e') in 0.009642 seconds 
+  Import took 0.013025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.081992 seconds.
+  path: Assets/Textures/explosion.png
+  artifactKey: Guid(5b1a834922e18cf4da365f6212ada57c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/explosion.png using Guid(5b1a834922e18cf4da365f6212ada57c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '088339bb2f651f91afef0af1b357dfac') in 0.014966 seconds 
+  Import took 0.018559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.046168 seconds.
+  path: Assets/SkySerie Freebie/FreebieHdri/CasualDay4K.hdr
+  artifactKey: Guid(1153dc89e66880c4eb7adc16ba588855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySerie Freebie/FreebieHdri/CasualDay4K.hdr using Guid(1153dc89e66880c4eb7adc16ba588855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '548f880889717f49b19744022195c1f3') in 0.054723 seconds 
+  Import took 0.059635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
+  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12753698942b7923843b4bc90c629266') in 0.007950 seconds 
+  Import took 0.011084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.682704 seconds.
+  path: Assets/Toon Muzzleflash Pack/Components
+  artifactKey: Guid(0cf8059ca812ba341933690e39e773c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Toon Muzzleflash Pack/Components using Guid(0cf8059ca812ba341933690e39e773c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef44e6bc9ea46972aef74ef41c8b8ee4') in 0.004803 seconds 
+  Import took 0.008257 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001895 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.641 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3019 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 213.1 MB.
+System memory in use after: 213.3 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3703.
+Total: 2.004600 ms (FindLiveObjects: 0.201700 ms CreateObjectMapping: 0.072900 ms MarkObjects: 1.662400 ms  DeleteObjects: 0.066900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

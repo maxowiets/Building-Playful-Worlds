@@ -20,7 +20,8 @@ public class PlayerControls : MonoBehaviour
 
     private void Update()
     {
-        switch (weaponList.currentWeaponShootingMode.shootingMode)
+        //---------------------------------------- Shooting -------------------------------------------\\
+        switch (weaponList.currentWeaponShootingMode?.shootingMode)
         {
             case ShootingModeEnum.SEMI:
                 if (Input.GetKeyDown(fire1))
@@ -37,57 +38,43 @@ public class PlayerControls : MonoBehaviour
             default:
                 break;
         }
+        //---------------------------------------------------------------------------------------------\\
 
+        //--------------------------------------- Reloading -------------------------------------------\\
         if (Input.GetKeyDown(reload))
         {
             weaponList.currentWeaponReloadMixin?.Action();
         }
+        //---------------------------------------------------------------------------------------------\\
 
-        //Switching weapons
+        //--------------------------------------- Switching weapons -----------------------------------\\
         if (Input.mouseScrollDelta.y > 0)
         {
             if (weaponList.currentWeaponSwitching.Check())
             {
-                if (weaponList.currentWeaponReloadMixin != null)
-                {
-                    if (weaponList.currentWeaponReloadMixin.GetComponent<ReloadClip>().isReloading)
-                    {
-                        weaponList.currentWeaponReloadMixin.GetComponent<ReloadClip>().isReloading = false;
-                        weaponList.currentWeaponReloadMixin.GetComponent<ReloadClip>().reloadTime = 0;
-                    }
-                }
-                weaponList.currentWeaponSwitching.Action();
-                StartCoroutine(weaponList.SwitchToNextWeapon());
+                StartCoroutine(weaponList.NewSwitchWeapon(weaponList.currentWeaponNumber + 1));
             }
         }
         if (Input.mouseScrollDelta.y < 0)
         {
             if (weaponList.currentWeaponSwitching.Check())
             {
-                if (weaponList.currentWeaponReloadMixin != null)
-                {
-                    if (weaponList.currentWeaponReloadMixin.GetComponent<ReloadClip>().isReloading)
-                    {
-                        weaponList.currentWeaponReloadMixin.GetComponent<ReloadClip>().isReloading = false;
-                        weaponList.currentWeaponReloadMixin.GetComponent<ReloadClip>().reloadTime = 0;
-                    }
-                }
-                weaponList.currentWeaponSwitching.Action();
-                StartCoroutine(weaponList.SwitchToPreviousWeapon());
+                StartCoroutine(weaponList.NewSwitchWeapon(weaponList.currentWeaponNumber - 1));
             }
         }
         for (int i = 0; i < weaponList.weapons.Count; i++)
         {
-            if (weaponList.currentWeaponSwitching.Check())
+            if (Input.GetKey(weaponKeyCodes[i]))
             {
-                if (Input.GetKey(weaponKeyCodes[i]))
+                if (weaponList.currentWeaponSwitching.Check())
                 {
-                    weaponList.currentWeaponSwitching.Action();
-                    StartCoroutine(weaponList.SwitchWeapon(i));
+                    StartCoroutine(weaponList.NewSwitchWeapon(i));
                 }
             }
         }
+        //---------------------------------------------------------------------------------------------\\
 
+        //-------------------------------------- Scoping ----------------------------------------------\\
         if (Input.GetKey(scope))
         {
             if (weaponList.currentWeaponMixins.GetComponent<Scoping>() && weaponList.currentWeaponSwitching.Check())
@@ -95,5 +82,6 @@ public class PlayerControls : MonoBehaviour
                 weaponList.currentWeaponMixins.GetComponent<Scoping>().isScoping = true;
             }
         }
+        //---------------------------------------------------------------------------------------------\\
     }
 }

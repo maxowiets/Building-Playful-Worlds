@@ -17,11 +17,13 @@ public class PickUps : MonoBehaviour
         {
             modelDic.Add(allTypes[i], allMesh[i]);
         }
+
+        var rand = Random.Range(0, allTypes.Length);
+        pickUpType = allTypes[rand];
     }
 
     private void Start()
     {
-        Debug.Log(modelDic[pickUpType]);
         model.mesh = modelDic[pickUpType];
     }
 

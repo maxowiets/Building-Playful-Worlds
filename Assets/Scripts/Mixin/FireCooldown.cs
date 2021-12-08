@@ -6,7 +6,7 @@ public class FireCooldown : MixinBase
 {
     public FloatData data;
     float cooldownTime;
-    bool isCool;
+    bool isCool = true;
 
     public override bool Check()
     {

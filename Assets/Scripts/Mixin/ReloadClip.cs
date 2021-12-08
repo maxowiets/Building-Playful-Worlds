@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ReloadClip : MixinBase
 {
@@ -9,6 +10,8 @@ public class ReloadClip : MixinBase
     public float reloadTime;
     public bool isReloading;
 
+    public TextMeshProUGUI ammoText;
+
     public override bool Check()
     {
         return !isReloading;
@@ -16,8 +19,11 @@ public class ReloadClip : MixinBase
 
     public override void Action()
     {
-        isReloading = true;
-        reloadTime = 0;
+        if (data.CurrentAmmo > 0)
+        {
+            isReloading = true;
+            reloadTime = 0;
+        }
     }
 
     private void Update()
@@ -27,9 +33,15 @@ public class ReloadClip : MixinBase
             reloadTime += Time.deltaTime;
             if (reloadTime >= data.ReloadDuration * PlayerStats.ReloadSpeedMultiplier)
             {
-                data.CurrentClipSize = data.MaxClipSize;
+                data.CurrentClipSize = data.MaxClipSize > data.CurrentAmmo ? data.CurrentAmmo : data.MaxClipSize;
                 isReloading = false;
+                UpdateAmmoUI();
             }
         }
+    }
+
+    public void UpdateAmmoUI()
+    {
+        ammoText.text = data.CurrentClipSize + " / " + (data.CurrentAmmo - data.CurrentClipSize);
     }
 }

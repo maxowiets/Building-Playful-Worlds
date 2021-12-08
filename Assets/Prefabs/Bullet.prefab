@@ -138,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9007078539260685194}
-  - component: {fileID: 5444210537108247729}
+  - component: {fileID: 889457826513947552}
   m_Layer: 0
   m_Name: BulletLogic
   m_TagString: Untagged
@@ -160,7 +160,7 @@ Transform:
   m_Father: {fileID: 2434256044990062787}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5444210537108247729
+--- !u!114 &889457826513947552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,15 +169,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7247296358148020971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c4b0df4c1867314e8054770dd30fb3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9535848632626f24aae70ae1e3872fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
   bullet: {fileID: 2434256044990062787}
-  hitParticles: {fileID: 2882632248756380060, guid: 0939b067ff542c8498bc92f8be7128dc, type: 3}
-  particleDuration: 1
   bulletLifeTime: 3
   bulletDamage: 10
+  hitParticle: {fileID: 2882632248756380060, guid: 0939b067ff542c8498bc92f8be7128dc, type: 3}
+  particleDuration: 1
 --- !u!1 &7457189969699395928
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +239,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3ae3a05e9b9771943b71d1c7b60c0802, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
