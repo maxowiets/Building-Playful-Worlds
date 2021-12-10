@@ -26,9 +26,9 @@ public class Rocket : BaseBulletTransform
 
         foreach (var obj in hitObjects)
         {
-            if (obj.GetComponent<Enemy>())
+            if (obj.GetComponent(typeof(IDamagable)))
             {
-                obj.GetComponent<Enemy>().TakeDamage(bulletDamage);
+                obj.GetComponent<IDamagable>().TakeDamage(bulletDamage);
             }
         }
         Destroy(bullet.gameObject);

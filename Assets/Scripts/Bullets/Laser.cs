@@ -18,7 +18,7 @@ public class Laser : MonoBehaviour
         if (hit.collider != null)
         {
             length = Vector3.Distance(transform.position, hit.point);
-            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            IDamagable enemy = hit.collider.GetComponent<IDamagable>();
             if (enemy != null)
             {
                 enemy.TakeDamage(damage * PlayerStats.DamageMultiplier);

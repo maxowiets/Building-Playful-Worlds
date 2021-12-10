@@ -22,9 +22,9 @@ public class Bullet : BaseBulletTransform
     {
         var newParticle = Instantiate(hitParticle, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
 
-        if (hit.collider.GetComponent<Enemy>())
+        if (hit.collider.GetComponent(typeof(IDamagable)))
         {
-            hit.collider.GetComponent<Enemy>().TakeDamage(bulletDamage);
+            hit.collider.GetComponent<IDamagable>().TakeDamage(bulletDamage);
         }
 
         Destroy(newParticle, particleDuration);

@@ -11,6 +11,9 @@ public class EnemyController : MonoBehaviour
     public int patrolIndex;
     public float aggroRange;
     PlayerControls player;
+    public IDamagable target;
+    public float attackSpeed;
+    public float damage;
 
     FSM m_fsm = new FSM();
 
@@ -22,12 +25,11 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        m_fsm.AddState(typeof(Idle), new Idle(m_fsm, this, nav, player));
-        m_fsm.AddState(typeof(Patrol), new Patrol(m_fsm, this, nav, player));
         m_fsm.AddState(typeof(Chase), new Chase(m_fsm, this, nav, player));
         //m_fsm.AddState(typeof(Kill), new Kill(m_fsm, this));
+        m_fsm.AddState(typeof(DestroyObject), new Chase(m_fsm, this, nav, player));
 
-        m_fsm.SetCurrentState(m_fsm.GetState(typeof(Patrol)));
+        m_fsm.SetCurrentState(m_fsm.GetState(typeof(Chase)));
     }
 
     private void Update()
@@ -49,9 +51,9 @@ public class Idle : State
     float originalNavSpeed;
     PlayerControls player;
 
-
     float idleTimer;
     float idleTime;
+
     public Idle(FSM fsm, EnemyController enemy, NavMeshAgent nav, PlayerControls player) : base(fsm)
     {
         this.enemy = enemy;
@@ -170,9 +172,23 @@ public class Chase : State
             nav.SetDestination(player.transform.position);
         }
 
-        if (Vector3.Distance(enemy.transform.position, player.transform.position) > enemy.aggroRange)
+        //code for idle state
+        //if (Vector3.Distance(enemy.transform.position, player.transform.position) > enemy.aggroRange)
+        //{
+        //    m_fsm.SetCurrentState(m_fsm.GetState(typeof(Idle)));
+        //}
+
+        nav.CalculatePath(nav.destination, nav.path);
+        if(nav.path.status == NavMeshPathStatus.PathPartial)
         {
-            m_fsm.SetCurrentState(m_fsm.GetState(typeof(Idle)));
+            RaycastHit hit;
+            if (Physics.Raycast(enemy.transform.position, enemy.transform.forward, out hit, 1f))
+            {
+                if (hit.collider.GetComponent<ObstacleBlock>() && nav.velocity == Vector3.zero)
+                {
+                    enemy.target = hit.collider.GetComponent<ObstacleBlock>();
+                }
+            }
         }
     }
 
@@ -214,5 +230,48 @@ public class Kill : State
     public override void OnExit()
     {
 
+    }
+}
+
+public class DestroyObject : State
+{
+    EnemyController enemy;
+    float attackTimer;
+    float attackTime;
+
+    public DestroyObject(FSM fsm, EnemyController enemy) : base(fsm)
+    {
+        this.enemy = enemy;
+    }
+
+    public override void OnEnter()
+    {
+        attackTime = 0;
+        attackTimer = enemy.attackSpeed;
+    }
+
+    public override void OnUpdate()
+    {
+        attackTime += Time.deltaTime;
+        if (attackTime >= attackTimer)
+        {
+            attackTime = 0;
+            Attack();
+        }
+    }
+
+    public override void OnFixedUpdate()
+    {
+
+    }
+
+    public override void OnExit()
+    {
+        enemy.target = null;
+    }
+
+    void Attack()
+    {
+        enemy.target.TakeDamage(enemy.damage);
     }
 }

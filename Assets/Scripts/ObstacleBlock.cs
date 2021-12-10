@@ -1,29 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IDamagable
+public class ObstacleBlock : MonoBehaviour, IDamagable
 {
     public float health;
-
     public float Health { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         Health = health;
     }
-
     public void TakeDamage(float damage)
     {
         Health -= damage;
         if (Health <= 0)
         {
-            Die();
+            Destroy(this.gameObject);
         }
     }
-
-    void Die()
-    {
-        Destroy(this.gameObject);
-    }
+    
 }

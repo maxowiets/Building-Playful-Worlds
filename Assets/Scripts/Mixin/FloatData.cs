@@ -63,7 +63,7 @@ public class FloatData : MonoBehaviour
     float scopeSpeed;
     public float ScopeSpeed { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         ShotsPerSecond = shotsPerSecond;
         BulletsPerShot = bulletsPerShot;
