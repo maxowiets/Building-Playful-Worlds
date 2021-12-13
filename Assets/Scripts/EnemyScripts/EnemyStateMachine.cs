@@ -46,6 +46,11 @@ namespace EnemyPatterns
             m_currentState?.OnEnter();
         }
 
+        public State GetCurrentState()
+        {
+            return m_currentState;
+        }
+
         public void OnUpdate()
         {
             m_currentState?.OnUpdate();

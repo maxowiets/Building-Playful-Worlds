@@ -130,7 +130,7 @@ MonoBehaviour:
   bulletDamage: 100
   hitParticle: {fileID: 7529157316993748224, guid: a1a384b2f4fe52840a241a19d9ec1542, type: 3}
   particleDuration: 2
-  blastRadius: 4
+  blastRadius: 10
 --- !u!1 &2937774029364601941
 GameObject:
   m_ObjectHideFlags: 0
