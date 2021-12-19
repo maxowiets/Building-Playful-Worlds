@@ -6,7 +6,6 @@ using TMPro;
 public class CheckClip : MixinActionable
 {
     public FloatData data;
-    public TextMeshProUGUI ammoText;
 
     public override bool Check()
     {
@@ -35,6 +34,6 @@ public class CheckClip : MixinActionable
 
     void UpdateAmmoUI()
     {
-        ammoText.text = data.CurrentClipSize + " / " + (data.CurrentAmmo - data.CurrentClipSize);
+        UIManager.Instance.ammoCounterUI.UpdateAmmoText(data.CurrentClipSize + " / " + (data.CurrentAmmo - data.CurrentClipSize));
     }
 }

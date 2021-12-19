@@ -10,8 +10,6 @@ public class ReloadClip : MixinBase
     public float reloadTime;
     public bool isReloading;
 
-    public TextMeshProUGUI ammoText;
-
     public override bool Check()
     {
         return !isReloading;
@@ -42,6 +40,6 @@ public class ReloadClip : MixinBase
 
     public void UpdateAmmoUI()
     {
-        ammoText.text = data.CurrentClipSize + " / " + (data.CurrentAmmo - data.CurrentClipSize);
+        UIManager.Instance.ammoCounterUI.UpdateAmmoText(data.CurrentClipSize + " / " + (data.CurrentAmmo - data.CurrentClipSize));
     }
 }

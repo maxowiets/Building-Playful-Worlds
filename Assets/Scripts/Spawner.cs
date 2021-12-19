@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    float timer;
-    public GameObject block;
+    public float timer;
+    float time;
+    public GameObject spawnableObject;
+    public Vector2 spawnSize;
 
     // Start is called before the first frame update
     void Start()
@@ -16,10 +18,29 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer <= Time.time)
+        time += Time.deltaTime;
+        if (time >= timer)
         {
-            timer = Time.time + 1;
-            Instantiate(block, new Vector3(Random.Range(-20, 20), Random.Range(0, 5), Random.Range(-20, 20)), Quaternion.identity);
+            time -= timer;
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnSize.x * 0.5f, spawnSize.x * 0.5f), 0, Random.Range(-spawnSize.y * 0.5f, spawnSize.y * 0.5f)); 
+            Instantiate(spawnableObject, transform.position + spawnPosition, Quaternion.identity);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawLine(new Vector3(transform.position.x - spawnSize.x * 0.5f, transform.position.y, transform.position.z - spawnSize.y * 0.5f)
+            , new Vector3(transform.position.x + spawnSize.x * 0.5f, transform.position.y, transform.position.z - spawnSize.y * 0.5f));
+
+        Gizmos.DrawLine(new Vector3(transform.position.x - spawnSize.x * 0.5f, transform.position.y, transform.position.z - spawnSize.y * 0.5f)
+            , new Vector3(transform.position.x - spawnSize.x * 0.5f, transform.position.y, transform.position.z + spawnSize.y * 0.5f));
+
+        Gizmos.DrawLine(new Vector3(transform.position.x + spawnSize.x * 0.5f, transform.position.y, transform.position.z - spawnSize.y * 0.5f)
+            , new Vector3(transform.position.x + spawnSize.x * 0.5f, transform.position.y, transform.position.z + spawnSize.y * 0.5f));
+
+        Gizmos.DrawLine(new Vector3(transform.position.x - spawnSize.x * 0.5f, transform.position.y, transform.position.z + spawnSize.y * 0.5f)
+            , new Vector3(transform.position.x + spawnSize.x * 0.5f, transform.position.y, transform.position.z + spawnSize.y * 0.5f));
     }
 }
