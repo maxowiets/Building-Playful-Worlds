@@ -52,6 +52,9 @@ public class PlayerHealth : MonoBehaviour, IDamagable
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             GetComponent<Rigidbody>().isKinematic = true;
             playerCamera.enabled = false;
+            UIManager.Instance.deathScreen.gameObject.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

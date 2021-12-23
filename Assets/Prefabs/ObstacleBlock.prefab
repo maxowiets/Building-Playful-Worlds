@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5560933286673970800}
   - component: {fileID: 6057716564719993655}
   - component: {fileID: 4628810301401644090}
+  - component: {fileID: -7108919716233721513}
   m_Layer: 0
   m_Name: ObstacleBlock
   m_TagString: Untagged
@@ -127,3 +128,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   meshRen: {fileID: 5697521297279230688}
+--- !u!114 &-7108919716233721513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6057716564719993653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a758d41602719b44a3f936a7609f1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0

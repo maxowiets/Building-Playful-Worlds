@@ -9,9 +9,11 @@ public class Scoping : MonoBehaviour
     public Transform scopeTransform;
     public bool isScoping;
 
+    public MixinBase reloadMixin;
+
     private void Update()
     {
-        if (isScoping)
+        if (isScoping && reloadMixin.Check())
         {
             weaponTransform.localPosition = Vector3.MoveTowards(weaponTransform.localPosition, scopeTransform.localPosition, data.ScopeSpeed * Time.deltaTime);
         }

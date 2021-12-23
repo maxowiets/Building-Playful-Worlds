@@ -11,4 +11,14 @@ public static class Extensions
         float distance = Vector3.Distance(a, b);
         return distance;
     }
+
+    public static int CalculateRemainder(this int begin, int divide)
+    {
+        while (begin - divide >= 0)
+        {
+            begin -= divide;
+        }
+
+        return begin;
+    }
 }

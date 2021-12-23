@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserWeapon : MixinBase
 {
+    public FloatData data;
     public Transform firePosition;
     float maxRange = 100;
     public GameObject laser;
@@ -26,6 +27,7 @@ public class LaserWeapon : MixinBase
         var newLaser = Instantiate(laser, firePosition.transform.position, Quaternion.LookRotation(firePosition.transform.forward)).GetComponent<Laser>();
         newLaser.length = maxRange;
         newLaser.laserCharge = currentCharge / maxCharge;
+        newLaser.damage = data.Damage;
 
         if (Physics.Raycast(firePosition.position, firePosition.transform.forward, out hit, maxRange))
         {

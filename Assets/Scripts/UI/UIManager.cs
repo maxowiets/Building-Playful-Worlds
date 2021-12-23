@@ -33,7 +33,9 @@ public class UIManager : MonoBehaviour
         _instance = this;
     }
 
-    public DeathCounterUI deathCounterUI;
     public AmmoCounterUI ammoCounterUI;
     public PlayerHealthUI playerHealthUI;
+    public WaveManager waveManagerUI;
+    public DeathScreen deathScreen;
+    public BuffsUIManager buffUI;
 }

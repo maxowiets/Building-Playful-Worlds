@@ -38,6 +38,8 @@ public class PickUps : MonoBehaviour
 
     void IncreaseStat()
     {
+        PlayerStats.totalBuffs++;
+
         switch (pickUpType)
         {
             case PickUpType.DAMAGE:
@@ -70,5 +72,7 @@ public class PickUps : MonoBehaviour
             default:
                 break;
         }
+
+        UIManager.Instance.buffUI.AddBuffUI(pickUpType);
     }
 }

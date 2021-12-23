@@ -6,6 +6,10 @@ public class FloatData : MonoBehaviour
 {
     [Header("Shooting")]
     [SerializeField]
+    float damage;
+    public float Damage { get; set; }
+
+    [SerializeField]
     float shotsPerSecond;
     public float ShotsPerSecond { get; set; }
 
@@ -65,6 +69,7 @@ public class FloatData : MonoBehaviour
 
     private void Awake()
     {
+        Damage = damage;
         ShotsPerSecond = shotsPerSecond;
         BulletsPerShot = bulletsPerShot;
         Accuracy = accuracy;

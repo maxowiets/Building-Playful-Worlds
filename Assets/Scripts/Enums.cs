@@ -32,3 +32,15 @@ public enum PlayerState
     JUMPING,
     CROUCHING,
 }
+
+public enum EnemyType
+{
+    NORMAL = 0,
+    FIRE,
+}
+
+public enum MaterialType
+{
+    BLOCK = 0,
+    FLESH,
+}

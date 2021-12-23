@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public static int totalBuffs;
+
     //------------------------- Weapon Stats ----------------------------\\
-    public float damageMultiplier;                                 //NOT SET
-    public static float DamageMultiplier { get; set; }              //NOT SET
+    public float damageMultiplier; 
+    public static float DamageMultiplier { get; set; }  
 
     public float attackSpeedMultiplier;
     public static float AttackSpeedMultiplier { get; set; }
@@ -35,6 +37,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Awake()
     {
+        totalBuffs = 0;
         DamageMultiplier = damageMultiplier;
         AttackSpeedMultiplier = attackSpeedMultiplier;
         RecoilMultiplier = recoilMultiplier;

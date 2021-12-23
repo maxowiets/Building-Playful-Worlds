@@ -18,7 +18,8 @@ public class ShootProjectile : MixinBase
             shootDirection = shootDirection + firePosition.TransformDirection(accuracyOffset);
             Quaternion bulletRotation = Quaternion.LookRotation(shootDirection);
 
-            Instantiate(bullet, firePosition.position, bulletRotation);
+            var newBullet = Instantiate(bullet, firePosition.position, bulletRotation);
+            newBullet.GetComponentInChildren<BaseBulletTransform>().bulletDamage = data.Damage;
         }
     }
 }
